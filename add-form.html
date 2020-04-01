@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Form</title>
+</head>
+<body>
+    <hr>
+    <section id="add-form">
+        <form action="/add-form-results" method="POST">
+            <h1 align="center">Add Form</h1>
+<!-- All form inputs for Artist Information seperated by line breaks-->
+            <h2>Artist Information</h2>
+            <section class="Artist Information">
+                    <label for="Fname">First name</label>
+                    <input type="text" name="Fname" id="Fname" minlength="1" maxlength="50" required>
+                    <label for="Lname">Last name</label>
+                    <input type="text" name="Lname" id="Lname" minlength="1" maxlength="50" required>
+                <br>
+                    <label for="Phone">Phone number (with area code)</label>
+                    <input type="tel" name="Phone" id="Phone"placeholder="907-123-4567" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <br>
+                    <label for="Email">Email</label>
+                    <input type="text" name="Email" id="Email">
+                <br>
+                    <label for="Address1">Primary address</label>
+                    <input type="text" name="Address1" id="Address1" placeholder="1234 Random St." required>
+                <br>
+                    <label for="Address2">Alternate address</label>
+                    <input type="text" name="Address2" id="Address2">
+                <br>
+                    <label for="State">State</label>
+                    <input type="text" name="State" id="State" minlength="3" maxlength="50" required>
+                <br>
+                    <label for="City">City</label>
+                    <input type="text" name="City" id="City" maxlength="50" required>
+                <br>
+                    <label for="Zip">Zip code</label>
+                    <input type="text" name="Zip" id="Zip" minlength="5" maxlength="5" placeholder="99508" required>
+                <br>
+                    <label for="Shareholder">Is the artist a shareholder?</label>
+                    <input type="checkbox" name="Shareholder" id="Shareholder">
+            </section>
+<!-- All form inputs for Art Information seperated for line breaks-->
+            <hr>
+            <h2>Art Information</h2>
+            <section class="Art Information">
+                    <label for="Title">Title</label>
+                    <input type="text" name="Title" id="Title"  maxlength="10" required>
+                <br>
+                    <label for="Type">Type</label>
+                    <input type="text" name="Type" id="Type"  maxlength="10">
+                <br>
+                    <label for="Collection">Collection</label>
+                    <input type="text" name="Collection" id="Collection" maxlength="10">
+                <br>
+                    <label for="Media">Media</label>
+                    <input type="text" name="Media" id="Media"  maxlength="10">
+                <br>
+                    <label for="Status">Status</label>
+                        <select name="Status" id="Status">
+                            <option value="Stored">Stored</option>
+                            <option value="Gifted">Gifted</option>
+                            <option value="Loaned">Loaned</option>
+                            <option value="Salvaged">Salvaged</option>
+                        </select>
+                <br>
+                    <label for="Purchase_Price">Purchase Price</label>
+                    <input type="number" name="Purchase_Price" id="Purchase_Price" min="0" max="9999999" step=".01">
+                <br>
+                    <label for="Value">What is it worth?</label>
+                    <input type="number" name="Value" id="Value" min="0" max="9999999" step=".01">
+                <br>
+                    <label for="Acquireddt">Acquired date</label>
+                    <input type="date" name="Acquireddt" id="Acquireddt">
+                <br>
+                    <label for="Available">Availability</label>
+                        <select name="Available" id="Available">
+                            <option value="Available">Available</option>
+                            <option value="Nonavailable">Nonavailable</option>
+                        </select>
+                <br>
+                    <label for="Description">Any extra information?</label>
+                    <textarea id="Description" name="Description" rows="3" cols="40"></textarea>
+            </section>
+<!-- All form inputs for Art Location Information seperated for line breaks-->
+            <hr>
+            <h2>Art Location Information</h2>
+            <section class="Art Location Information">
+                    <label for="City">City</label>
+                        <select name="City" id="City" required>
+                            <option value="Anchorage">Anchorage</option>
+                            <option value="Nome">Nome</option>
+                        </select>
+                <br>
+                    <label for="Building">Building</label>
+                        <select name="Building" id="Building" required>
+                            <option value="Anchorage1">Anchorage1</option>
+                            <option value="Nome1">Nome1</option>
+                        </select>
+                <br>
+                    <label for="Room">Room</label>
+                    <input type="number" name="Room" id="Room" min="100" max="9999999">
+                <br>
+                    <label for="Description">Any extra information?</label>
+                    <textarea id="Description" name="Description" rows="3" cols="40"></textarea>  
+                </section>
+<!-- Basic submission button-->
+            <hr>
+            <section class="submission">
+                <input type="submit" id='query' value="Get Results">
+            </section>
+        </form>
+    </section>
+</body>
+</html>
